@@ -30,3 +30,13 @@ resource "aws_instance" "test" {
   }
 
 }
+
+# Create basic S3 bucket
+resource "aws_s3_bucket" "bucket" {
+  bucket = "dean-terraform-demo-bucket-1234567890"
+
+  tags = {
+    Name = "terraform_demo_bucket"
+
+  }
+}
